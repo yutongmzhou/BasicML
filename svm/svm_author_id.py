@@ -17,7 +17,8 @@ from sklearn.svm import SVC
 ### and testing datasets, respectively
 ### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
-
+#
+#Uncomment the below to train faster
 features_train = features_train[:int(len(features_train)/100)]
 labels_train = labels_train[:int(len(labels_train)/100)]
 
@@ -41,7 +42,7 @@ print()
 ###########################################################################################################
 t0 = time()
 
-clf = SVC(kernel="poly", gamma='scale', C=5.0)
+clf = SVC(kernel="poly", gamma='scale', C=10000.0)
 
 clf.fit(features_train, labels_train)
 print("Training Time:", round(time()-t0, 3), "s")
@@ -55,7 +56,7 @@ print()
 ###########################################################################################################
 t0 = time()
 
-clf = SVC(kernel="rbf", gamma='scale', C=5.0)
+clf = SVC(kernel="rbf", gamma='scale', C=10000.0)
 
 clf.fit(features_train, labels_train)
 print("Training Time:", round(time()-t0, 3), "s")
@@ -69,7 +70,7 @@ print()
 
 t0 = time()
 
-clf = SVC(kernel="sigmoid", gamma='scale', C=5.0)
+clf = SVC(kernel="sigmoid", gamma='scale', C=10000.0)
 
 clf.fit(features_train, labels_train)
 print("Training Time:", round(time()-t0, 3), "s")
