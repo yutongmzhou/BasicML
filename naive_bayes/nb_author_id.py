@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 
 """ 
-    Naive Bayes Classifier to identify emails by their authors
+    Naive Bayes is a simple, probabilistic classifier based on Bayes' Theorem, widely used for classification tasks.
+    It operates under the assumption of conditional independence, meaning it presumes that the features contributing to
+    the prediction are independent of each other given the class label, which is often not true in real-world scenarios.
+    Despite this "naive" assumption, Naive Bayes classifiers perform remarkably well in many practical applications,
+    particularly with large datasets. They calculate the probability of each class given a set of features and predict the
+    class with the highest posterior probability. Naive Bayes is efficient, easy to implement, and works well with both continuous
+    and discrete data, making it suitable for text classification tasks like spam detection and sentiment analysis. However, its
+    performance can be suboptimal when features are highly correlated.
     
     authors and labels:
     Sara has label 0
