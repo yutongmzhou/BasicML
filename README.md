@@ -1,2 +1,2 @@
 # BasicML
-Some basic ML algorithm implementations
+Some basic ML algorithms
