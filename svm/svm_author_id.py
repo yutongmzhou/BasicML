@@ -1,16 +1,24 @@
 #!/usr/bin/python3
 
 """
-    Use a SVM to identify emails from the Enron corpus by their authors:    
+    Use SVM to identify emails from the Enron corpus by their authors:
     Sara has label 0
     Chris has label 1
 """
-    
+
+"""
+Support Vector Machines (SVMs) are a powerful supervised machine learning algorithm used for classification and regression tasks. 
+SVMs work by finding the hyperplane that best separates the data into different classes. In a classification context, SVM aims to 
+maximize the margin, or distance, between the hyperplane and the nearest data points from each class, known as support vectors. This 
+maximization helps improve the model's ability to generalize to unseen data. SVMs can efficiently handle high-dimensional spaces and 
+are effective when the number of dimensions exceeds the number of samples. They also use kernel functions to transform data into higher 
+dimensions to handle non-linear relationships. However, SVMs can be computationally intensive and sensitive to the choice of kernel and 
+regularization parameters.
+"""
 import sys
 from time import time
 sys.path.append("../tools/")
 from email_preprocess import preprocess
-from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 
 ### features_train and features_test are the features for the training
